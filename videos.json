@@ -1,15 +1,6 @@
 {
   "videos": [
     {
-      "id": 1,
-      "title": "Epic Mountain Adventure - 4K",
-      "description": "Experience breathtaking mountain landscapes in stunning 4K resolution. New release!",
-      "thumbnail": "https://via.placeholder.com/300x160/4A90E2/FFFFFF?text=NEW+Mountain+4K",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/file_example_MP4_1280_10MG.mp4",
-      "duration": "5:20",
-      "category": "Nature"
-    },
-    {
       "id": 2,
       "title": "jhumka web series",
       "description": "bibi ka jhumka!",
@@ -18,77 +9,5 @@
       "duration": "8:45",
       "category": "fun"
     },
-    {
-      "id": 3,
-      "title": "Virtual Reality Gaming Experience",
-      "description": "Immerse yourself in the future of gaming with VR technology. Hot new content!",
-      "thumbnail": "https://via.placeholder.com/300x160/B8E986/FFFFFF?text=NEW+VR+Gaming",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample3.mp4",
-      "duration": "6:30",
-      "category": "Gaming"
-    },
-    {
-      "id": 4,
-      "title": "Space Exploration Documentary",
-      "description": "Journey through the cosmos with this amazing space documentary. Recently added!",
-      "thumbnail": "https://via.placeholder.com/300x160/F5A623/FFFFFF?text=NEW+Space+Doc",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample4.mp4",
-      "duration": "12:15",
-      "category": "Documentary"
-    },
-    {
-      "id": 5,
-      "title": "Beautiful Nature Scenery",
-      "description": "Experience the breathtaking beauty of nature with this amazing video showcasing stunning landscapes and wildlife.",
-      "thumbnail": "https://via.placeholder.com/300x160/4A90E2/FFFFFF?text=Nature+Video",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample5.mp4",
-      "duration": "2:30",
-      "category": "Nature"
-    },
-    {
-      "id": 6,
-      "title": "Funny Cat Compilation",
-      "description": "Watch the funniest cat moments that will make you laugh out loud! Perfect for stress relief.",
-      "thumbnail": "https://via.placeholder.com/300x160/50E3C2/FFFFFF?text=Funny+Cats",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample6.mp4",
-      "duration": "4:15",
-      "category": "Entertainment"
-    },
-    {
-      "id": 7,
-      "title": "Cooking Tutorial: Pasta",
-      "description": "Learn how to make delicious homemade pasta with this step-by-step cooking tutorial.",
-      "thumbnail": "https://via.placeholder.com/300x160/B8E986/FFFFFF?text=Cooking+Pasta",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample7.mp4",
-      "duration": "8:45",
-      "category": "Education"
-    },
-    {
-      "id": 8,
-      "title": "Travel Vlog: Japan",
-      "description": "Join us on an incredible journey through Japan, exploring Tokyo, Kyoto, and Osaka.",
-      "thumbnail": "https://via.placeholder.com/300x160/F5A623/FFFFFF?text=Japan+Travel",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample8.mp4",
-      "duration": "12:20",
-      "category": "Travel"
-    },
-    {
-      "id": 9,
-      "title": "Workout Routine for Beginners",
-      "description": "Start your fitness journey with this easy-to-follow workout routine designed for beginners.",
-      "thumbnail": "https://via.placeholder.com/300x160/BD10E0/FFFFFF?text=Workout+Guide",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample9.mp4",
-      "duration": "15:30",
-      "category": "Fitness"
-    },
-    {
-      "id": 10,
-      "title": "Music Performance Live",
-      "description": "Amazing live music performance featuring talented artists from around the world.",
-      "thumbnail": "https://via.placeholder.com/300x160/9013FE/FFFFFF?text=Live+Music",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample10.mp4",
-      "duration": "5:45",
-      "category": "Music"
-    }
   ]
 }
