@@ -1,13 +1,12 @@
 [
   {
-    "title": "Funny Cats Compilation",
-    "thumbnail": "https://videoplay.b-cdn.net/thumbnails/cat.jpg",
-    "url": "https://videoplay-fun.b-cdn.net/videos/funny-cats.mp4"
+    "title": "Sample Bunny Video",
+    "thumbnail": "https://i.imgur.com/UX0rQZQ.jpeg",
+    "url": "https://videoplay-fun.b-cdn.net/file_example_MP4_1280_10MG.mp4"
   },
-[
   {
-    "title": "Sample Bunny",
-    "thumbnail": "https://videoplay-fun.b-cdn.net/sample-thumb.jpg",
+    "title": "Another Sample Clip",
+    "thumbnail": "https://i.imgur.com/zY4JdFN.jpeg",
     "url": "https://videoplay-fun.b-cdn.net/file_example_MP4_1280_10MG.mp4"
   }
 ]
