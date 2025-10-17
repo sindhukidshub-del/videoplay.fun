@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Video | VideoPlay.fun</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h2>Redirecting to video...</h2>
 
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const videoURL = urlParams.get("url");
+    if (videoURL) {
+      window.location.href = videoURL; // Opens Bunny.net video page
+    } else {
+      document.body.innerHTML = "<h2>Video not found!</h2>";
+    }
+  </script>
+</body>
+</html>
