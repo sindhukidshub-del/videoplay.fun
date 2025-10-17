@@ -5,6 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player - VideoPlay.fun</title>
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Additional Mobile-specific Styles */
+        .mobile-video-container {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .main-video-player {
+            width: 100%;
+            height: auto;
+            max-height: 50vh;
+            border-radius: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .video-player-section {
+                padding: 1rem;
+                margin: 0 -20px;
+                width: calc(100% + 40px);
+                border-radius: 0;
+            }
+            
+            .main-video-player {
+                height: auto;
+                min-height: 250px;
+                max-height: 40vh;
+            }
+            
+            .video-info h2 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .video-info p {
+                font-size: 0.9rem;
+            }
+            
+            .related-videos-section {
+                padding: 1rem;
+                margin: 0 -20px;
+                width: calc(100% + 40px);
+                border-radius: 0;
+            }
+            
+            .related-videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-video-player {
+                min-height: 200px;
+                max-height: 35vh;
+            }
+            
+            .related-videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-info {
+                padding: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,13 +85,17 @@
     <main class="main">
         <div class="container">
             <div class="video-player-section">
-                <video 
-                    id="mainVideoPlayer" 
-                    controls 
-                    autoplay 
-                    class="main-video-player">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="mobile-video-container">
+                    <video 
+                        id="mainVideoPlayer" 
+                        controls 
+                        autoplay 
+                        playsinline
+                        class="main-video-player"
+                        poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI2NzUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmMmVmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2YjcyODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nIFZpZGVvLi4uPC90ZXh0Pjwvc3ZnPg==">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 
                 <div class="video-info">
                     <h2 id="videoTitle">Video Title</h2>
