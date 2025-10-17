@@ -11,46 +11,20 @@
     },
     {
       "id": 2,
-      "title": "jhumka bibi ka",
+      "title": "jhumka bibi ka.",
       "description": "jhumka gira web series.",
       "thumbnail": "https://videoplay-fun.b-cdn.net/IMG_20251017_221025.jpg",
       "videoUrl": "https://videoplay-fun.b-cdn.net/Jhumke_I_Ullu_Originals_I_Official_Trailer_I_Releasing_on_26th_April_2022(720p).mp4",
       "duration": "4:15",
-      "category": "Entertainment"
+      "category": "fun"
     },
+  
     {
       "id": 3,
-      "title": "Cooking Tutorial: Pasta",
-      "description": "Learn how to make delicious homemade pasta with this step-by-step cooking tutorial.",
-      "thumbnail": "https://via.placeholder.com/300x160/B8E986/FFFFFF?text=Cooking+Pasta",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample3.mp4",
-      "duration": "8:45",
-      "category": "Education"
-    },
-    {
-      "id": 4,
-      "title": "Travel Vlog: Japan",
-      "description": "Join us on an incredible journey through Japan, exploring Tokyo, Kyoto, and Osaka.",
-      "thumbnail": "https://via.placeholder.com/300x160/F5A623/FFFFFF?text=Japan+Travel",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample4.mp4",
-      "duration": "12:20",
-      "category": "Travel"
-    },
-    {
-      "id": 5,
-      "title": "Workout Routine for Beginners",
-      "description": "Start your fitness journey with this easy-to-follow workout routine designed for beginners.",
-      "thumbnail": "https://via.placeholder.com/300x160/BD10E0/FFFFFF?text=Workout+Guide",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample5.mp4",
-      "duration": "15:30",
-      "category": "Fitness"
-    },
-    {
-      "id": 6,
       "title": "Music Performance Live",
-      "description": "Amazing live music performance featuring talented artists from around the world.",
+      "description": "https://videoplay-fun.b-cdn.net/pexels-flowerstofox-27082077.jpg.",
       "thumbnail": "https://via.placeholder.com/300x160/9013FE/FFFFFF?text=Live+Music",
-      "videoUrl": "https://videoplay-fun.b-cdn.net/sample6.mp4",
+      "videoUrl": "https://videoplay-fun.b-cdn.net/Baap_Beta_Official_Trailer___Satrangii___Releasing_on_21st_May_Only_On_Atrangii_App(720p).mp4",
       "duration": "5:45",
       "category": "Music"
     }
