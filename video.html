@@ -1,91 +1,55 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player - Mastmaal.fun</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: #000;
-            color: white;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .back-btn {
-            background: #6a11cb;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .back-btn:hover {
-            background: #2575fc;
-        }
-
-        video {
-            width: 100%;
-            max-height: 70vh;
-            border-radius: 10px;
-        }
-
-        .video-info {
-            margin-top: 20px;
-            padding: 20px;
-            background: #1a1a1a;
-            border-radius: 10px;
-        }
-
-        .video-title {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: white;
-        }
-    </style>
+    <title>Video Player - VideoPlay.fun</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="container">
-        <button class="back-btn" onclick="window.history.back()">← Back to Videos</button>
-        
-        <video id="videoPlayer" controls autoplay>
-            Your browser does not support the video tag.
-        </video>
-        
-        <div class="video-info">
-            <h1 class="video-title" id="videoTitle">Video Title</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="back-btn">← Back to Videos</a>
+            <h1 class="logo">VideoPlay.fun</h1>
         </div>
-    </div>
+    </header>
 
-    <script>
-        // Get video URL and title from URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const videoUrl = urlParams.get('url');
-        const videoTitle = decodeURIComponent(urlParams.get('title') || 'Video');
+    <!-- Main Video Player -->
+    <main class="main">
+        <div class="container">
+            <div class="video-player-section">
+                <video 
+                    id="mainVideoPlayer" 
+                    controls 
+                    autoplay 
+                    class="main-video-player">
+                    Your browser does not support the video tag.
+                </video>
+                
+                <div class="video-info">
+                    <h2 id="videoTitle">Video Title</h2>
+                    <p id="videoDescription">Video description will appear here</p>
+                </div>
+            </div>
 
-        // Set video source and title
-        document.getElementById('videoPlayer').src = videoUrl;
-        document.getElementById('videoTitle').textContent = videoTitle;
-        document.title = videoTitle + ' - Mastmaal.fun';
+            <!-- Related Videos -->
+            <div class="related-videos-section">
+                <h3>Related Videos</h3>
+                <div class="related-videos-grid" id="relatedVideos">
+                    <!-- Related videos will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
 
-        // Auto-play video
-        document.getElementById('videoPlayer').play().catch(e => {
-            console.log('Auto-play prevented:', e);
-        });
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 VideoPlay.fun - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>
