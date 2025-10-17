@@ -3,46 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VideoPlay.fun - Free Video Streaming</title>
+    <title>VideoPlay.fun - Premium Video Streaming Platform</title>
+    <meta name="description" content="Watch latest videos, entertainment content and much more on VideoPlay.fun - Your ultimate video streaming destination">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Navigation Header -->
     <header class="header">
-        <div class="container">
-            <h1 class="logo">VideoPlay.fun</h1>
-            <p class="tagline">Watch amazing videos for free</p>
-        </div>
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h1 class="logo">VideoPlay<span class="logo-dot">.fun</span></h1>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-secondary" onclick="showSubscribeForm()">Subscribe</button>
+            </div>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="main">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <!-- Search Section -->
-            <div class="search-section">
-                <input type="text" id="searchInput" placeholder="Search videos..." class="search-input">
-                <button onclick="searchVideos()" class="search-btn">Search</button>
-            </div>
-
-            <!-- Video Grid -->
-            <div class="video-grid" id="videoGrid">
-                <!-- Videos will be loaded here dynamically -->
-            </div>
-
-            <!-- Loading Indicator -->
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                Loading videos...
+            <div class="hero-content">
+                <h1 class="hero-title">Unlimited Entertainment, Absolutely Free</h1>
+                <p class="hero-subtitle">Stream the latest videos, movies, and exclusive content in HD quality</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Videos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Streaming</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- New Videos Section -->
+    <section class="new-videos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Newly Added Videos</h2>
+                <p class="section-subtitle">Fresh content added this week</p>
+            </div>
+            <div class="new-videos-grid" id="newVideosGrid">
+                <!-- New videos will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- All Videos Section -->
+    <section class="all-videos-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">All Videos Collection</h2>
+                <div class="search-section">
+                    <input type="text" id="searchInput" placeholder="Search videos..." class="search-input">
+                    <button onclick="searchVideos()" class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Search
+                    </button>
+                </div>
+            </div>
+            <div class="video-grid" id="videoGrid">
+                <!-- All videos will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose VideoPlay.fun?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>HD Quality</h3>
+                    <p>All videos available in high definition for the best viewing experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Fast Streaming</h3>
+                    <p>Powered by Bunny.net for buffer-free streaming experience</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Device</h3>
+                    <p>Watch on any device - desktop, tablet, or mobile</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>Completely Free</h3>
+                    <p>No subscription fees, no hidden charges</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 VideoPlay.fun - All rights reserved</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VideoPlay.fun</h3>
+                    <p>Your ultimate destination for free video streaming and entertainment.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="#" class="footer-link" onclick="showPrivacyPolicy()">Privacy Policy</a>
+                    <a href="#" class="footer-link" onclick="showTerms()">Terms of Service</a>
+                    <a href="#" class="footer-link" onclick="showContact()">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <a href="#" class="footer-link">Entertainment</a>
+                    <a href="#" class="footer-link">Education</a>
+                    <a href="#" class="footer-link">Music</a>
+                    <a href="#" class="footer-link">Sports</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get updates on new videos</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input">
+                        <button class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VideoPlay.fun. All rights reserved. | Email: <a href="mailto:sj383482@gmail.com">sj383482@gmail.com</a></p>
+            </div>
         </div>
     </footer>
+
+    <!-- Modal Overlays -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Privacy Policy</h2>
+            <div class="policy-content">
+                <h3>Information We Collect</h3>
+                <p>We collect information you provide directly to us, including when you watch videos, search content, or contact us for support.</p>
+                
+                <h3>How We Use Your Information</h3>
+                <p>We use the information we collect to provide, maintain, and improve our services, develop new ones, and protect VideoPlay.fun and our users.</p>
+                
+                <h3>Information Sharing</h3>
+                <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information.</p>
+                
+                <h3>Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, please contact us at: <strong>sj383482@gmail.com</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Terms of Service</h2>
+            <div class="policy-content">
+                <h3>Acceptance of Terms</h3>
+                <p>By accessing and using VideoPlay.fun, you accept and agree to be bound by the terms and provision of this agreement.</p>
+                
+                <h3>Use License</h3>
+                <p>Permission is granted to temporarily access the materials on VideoPlay.fun for personal, non-commercial transitory viewing only.</p>
+                
+                <h3>User Conduct</h3>
+                <p>You agree not to use the service to share any content that is illegal, harmful, threatening, abusive, or otherwise objectionable.</p>
+                
+                <h3>Content</h3>
+                <p>All content provided on VideoPlay.fun is for entertainment and educational purposes only.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <p>Have questions or suggestions? We'd love to hear from you!</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> sj383482@gmail.com</p>
+                    <p><strong>Response Time:</strong> Within 24 hours</p>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" class="form-input">
+                    <input type="email" placeholder="Your Email" class="form-input">
+                    <textarea placeholder="Your Message" rows="5" class="form-input"></textarea>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="subscribeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Subscribe to VideoPlay.fun</h2>
+            <div class="subscribe-content">
+                <p>Get notified when new videos are added!</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" class="form-input" required>
+                    <button type="submit" class="btn-primary">Subscribe Now</button>
+                </form>
+                <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/script.js"></script>
 </body>
