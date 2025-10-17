@@ -1,22 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Play Video | VideoPlay.fun</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Play Video</title>
+  <style>
+    :root{
+      --bg:#070708; --text:#eef3f7; --muted:#9aa4ad; --accent:#e50914;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#050506,#0b0c0d);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial;min-height:100vh;display:flex;flex-direction:column}
+    header{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,0.03)}
+    .back{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);display:inline-flex;gap:8px;align-items:center}
+    main{flex:1;display:grid;grid-template-columns: 1fr 320px;gap:18px;padding:18px}
+    @media(max-width:900px){ main{grid-template-columns:1fr} .sidebar{order:2} }
+    .player{
+      background:#000;
+      border-radius:10px;
+      overflow:hidden;
+      position:relative;
+      min-height:220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    video{width:100%;height:100%;display:block;background:black}
+    .title{font-size:18px;margin:8px 0 0}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    .sidebar{background:rgba(255,255,255,0.02);padding:12px;border-radius:12px}
+    .related-item{display:flex;gap:10px;align-items:center;padding:8px;border-radius:8px;margin-bottom:8px;text-decoration:none;color:inherit}
+    .related-item img{width:84px;height:48px;object-fit:cover;border-radius:6px}
+    footer{padding:12px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
 </head>
 <body>
-  <h2>Redirecting to video...</h2>
+  <header>
+    <a class="back" href="index.html" aria-label="Back to gallery">&larr; Back</a>
+    <div>
+      <div id="pageTitle" style="font-weight:600">Playing</div>
+      <div class="meta" id="pageSub"></div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="player" id="playerWrap">
+        <video id="player" controls playsinline webkit-playsinline controlsList="nodownload" preload="metadata">
+          <!-- source set by JS -->
+        </video>
+      </div>
+      <div style="padding-top:12px">
+        <div class="title" id="vtitle"></div>
+        <div class="meta" id="vdesc"></div>
+      </div>
+    </section>
+
+    <aside class="sidebar" id="sidebar">
+      <div style="font-weight:700;margin-bottom:8px">Other videos</div>
+      <div id="related"></div>
+    </aside>
+  </main>
+
+  <footer>Tip: Use mobile full-screen for best experience.</footer>
 
   <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const videoURL = urlParams.get("url");
-    if (videoURL) {
-      window.location.href = videoURL; // Opens Bunny.net video page
+    // Read URL params
+    const params = new URLSearchParams(location.search);
+    const url = params.get('url') || '';
+    const title = params.get('title') || '';
+    const thumb = params.get('thumb') || '';
+
+    const player = document.getElementById('player');
+    const vtitle = document.getElementById('vtitle');
+    const vdesc = document.getElementById('vdesc');
+    const pageTitle = document.getElementById('pageTitle');
+    const pageSub = document.getElementById('pageSub');
+
+    // If url present, set source
+    if(url){
+      // create source element (supports direct mp4 / HLS if server supports)
+      // If Bunny provides HLS (.m3u8) you'll want a player like hls.js — but this basic player supports mp4.
+      const src = document.createElement('source');
+      src.src = url;
+      // Try to get type from extension
+      if(url.endsWith('.m3u8')) {
+        // HLS: native support on Safari/iOS only. For other browsers you'd need hls.js (not included).
+        // Show a notice:
+        const note = document.createElement('div');
+        note.style.color = '#f0b';
+        note.style.marginBottom = '8px';
+        note.textContent = 'Note: This is an HLS stream (.m3u8). Browser support may vary.';
+        document.getElementById('playerWrap').prepend(note);
+      }
+      player.appendChild(src);
+      player.addEventListener('error', (e)=>{
+        console.error('Video error', e);
+      });
+      // Autoplay attempt (may be blocked by browser)
+      // player.autoplay = true;
+      // player.muted = true; // autoplay often requires muted
     } else {
-      document.body.innerHTML = "<h2>Video not found!</h2>";
+      document.getElementById('playerWrap').innerHTML = '<div style="padding:18px;color:var(--muted)">Koi video URL nahi mila. Index se open karo.</div>';
     }
+
+    // Set metadata
+    vtitle.textContent = title || 'Untitled';
+    vdesc.textContent = thumb ? '' : '';
+    pageTitle.textContent = title ? title : 'Play Video';
+    pageSub.textContent = url ? (new URL(url, location.href)).hostname : '';
+
+    // Load related videos from videos.json (same file as index)
+    async function loadRelated(){
+      try{
+        const res = await fetch('videos.json', {cache:'no-cache'});
+        if(!res.ok) throw new Error('Failed to load related');
+        const data = await res.json();
+        const rel = document.getElementById('related');
+        rel.innerHTML = '';
+        const currentUrl = url;
+        const filtered = data.filter(d => d.url !== currentUrl).slice(0,8);
+        for(const item of filtered){
+          const a = document.createElement('a');
+          a.href = 'video.html?' + new URLSearchParams({url: item.url, title: item.title, thumb: item.thumbnail}).toString();
+          a.className = 'related-item';
+          a.innerHTML = `<img src="${item.thumbnail || ''}" alt="${(item.title||'')}" loading="lazy" />
+                         <div style="flex:1">
+                           <div style="font-weight:600;font-size:14px">${item.title || 'Untitled'}</div>
+                           <div style="color:var(--muted);font-size:13px;margin-top:6px">${item.description ? item.description.slice(0,80) : ''}</div>
+                         </div>`;
+          rel.appendChild(a);
+        }
+      }catch(err){
+        console.error(err);
+      }
+    }
+
+    loadRelated();
+
+    // Mobile: try to enter fullscreen on play (best-effort)
+    player.addEventListener('play', async ()=>{
+      if(screen.orientation && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+        // do nothing aggressive — user controls fullscreen
+      }
+    });
   </script>
 </body>
 </html>
