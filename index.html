@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastmaal.fun - Watch Amazing Videos for Free</title>
-    <meta name="description" content="Watch amazing videos on Mastmaal.fun - Entertainment, Education, Gaming and more! Free video sharing platform.">
+    <title>Mastmaal.fun - Free Video Streaming</title>
+    <meta name="description" content="Watch amazing videos for free on Mastmaal.fun">
     
     <!-- Ads Scripts -->
     <script type="text/javascript">
@@ -18,9 +18,6 @@
     </script>
     <script type="text/javascript" src="//www.highperformanceformat.com/43fc97b9028c31d1675dcb4dc9f5321f/invoke.js"></script>
 
-    <script type='text/javascript' src='//pl27816605.effectivegatecpm.com/d7/d9/b5/d7d9b5e6ca04b307c731ac045a8205f0.js'></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -29,24 +26,10 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        :root {
-            --primary: #6a11cb;
-            --primary-dark: #2575fc;
-            --secondary: #ff6b6b;
-            --dark: #2d3436;
-            --light: #f7f9fc;
-            --gray: #a4b0be;
-            --card-bg: #ffffff;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --radius: 12px;
-        }
-
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            background: #f8f9fa;
+            color: #333;
             line-height: 1.6;
-            overflow-x: hidden;
-            min-height: 100vh;
         }
 
         .container {
@@ -56,213 +39,78 @@
             padding: 0 15px;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
-            background-color: white;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
             position: fixed;
-            top: 0;
             width: 100%;
+            top: 0;
             z-index: 1000;
         }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-
         .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .logo-icon {
             font-size: 24px;
-            color: var(--primary);
-            margin-right: 8px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
+            font-weight: bold;
+            color: #6a11cb;
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            transition: color 0.3s;
-            cursor: pointer;
-            font-size: 14px;
-            padding: 8px 12px;
-            border-radius: 6px;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-            background: rgba(106, 17, 203, 0.1);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 20px;
-            color: var(--primary);
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 6px;
-            transition: background 0.3s;
-        }
-
-        .mobile-menu-btn:hover {
-            background: rgba(106, 17, 203, 0.1);
-        }
-
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 70px;
-            left: 0;
-            width: 100%;
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            z-index: 999;
-            border-top: 1px solid #eee;
-        }
-
-        .mobile-nav.active {
-            display: block;
-        }
-
-        .mobile-nav-links {
-            list-style: none;
-            padding: 15px;
-        }
-
-        .mobile-nav-links li {
-            margin-bottom: 8px;
-        }
-
-        .mobile-nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-            display: block;
-            padding: 12px 16px;
-            border-radius: 8px;
-            transition: all 0.3s;
-            font-size: 16px;
-        }
-
-        .mobile-nav-links a:hover {
-            background: var(--light);
-            color: var(--primary);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
-            padding: 130px 0 60px;
             text-align: center;
-            margin-top: 70px;
+            padding: 100px 0 50px;
+            margin-top: 60px;
         }
 
-        .hero-title {
-            font-size: 2rem;
+        .hero h1 {
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            font-weight: 800;
         }
 
-        .hero-subtitle {
+        .hero p {
             font-size: 1.1rem;
-            margin-bottom: 25px;
             opacity: 0.9;
-            font-weight: 600;
         }
 
         /* Videos Section */
-        .section {
+        .videos-section {
             padding: 50px 0;
         }
 
         .section-title {
-            font-size: 1.8rem;
             text-align: center;
+            font-size: 2rem;
             margin-bottom: 30px;
-            position: relative;
-            color: var(--dark);
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--primary-dark));
-            border-radius: 2px;
+            color: #333;
         }
 
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        @media (max-width: 768px) {
-            .video-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .video-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-        }
-
         .video-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
+            background: white;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
             cursor: pointer;
-            position: relative;
         }
 
         .video-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .video-thumbnail {
             width: 100%;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
         }
 
         .video-info {
@@ -270,282 +118,42 @@
         }
 
         .video-title {
-            font-size: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 8px;
-            font-weight: 600;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            min-height: 2.8em;
-            line-height: 1.3;
+            color: #333;
         }
 
-        .video-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--gray);
-            font-size: 0.8rem;
-            margin-top: 8px;
-        }
-
-        /* Video Detail Page */
-        .video-detail-page {
-            display: none;
-            padding: 90px 0 30px;
-            min-height: 100vh;
-        }
-
-        .video-detail-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 25px;
-            align-items: start;
-        }
-
-        @media (max-width: 768px) {
-            .video-detail-container {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
-
-        .main-video {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .video-player {
-            width: 100%;
-            background: #000;
-        }
-
-        .video-player video {
-            width: 100%;
-            height: auto;
-            max-height: 70vh;
-            display: block;
-        }
-
-        .video-detail-info {
-            padding: 25px;
-        }
-
-        .video-detail-title {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .video-detail-meta {
-            display: flex;
-            justify-content: space-between;
-            color: var(--gray);
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .video-detail-description {
-            color: var(--dark);
-            line-height: 1.6;
-        }
-
-        .related-videos {
-            margin-top: 0;
-        }
-
-        .related-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: var(--dark);
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .related-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .related-video-card {
-            display: flex;
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .related-video-card:hover {
-            transform: translateX(5px);
-        }
-
-        .related-thumbnail {
-            width: 120px;
-            height: 80px;
-            object-fit: cover;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            flex-shrink: 0;
-        }
-
-        .related-video-info {
-            padding: 12px;
-            flex: 1;
-        }
-
-        .related-video-title {
+        .video-views {
+            color: #666;
             font-size: 0.9rem;
-            margin-bottom: 5px;
-            font-weight: 600;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
 
-        .related-video-meta {
-            color: var(--gray);
-            font-size: 0.75rem;
-        }
-
-        /* Back Button */
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            background: var(--primary);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-            cursor: pointer;
-            border: none;
-        }
-
-        .back-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        /* Privacy Policy Page */
-        .privacy-policy {
-            display: none;
-            padding: 90px 0 30px;
-            min-height: 100vh;
-        }
-
-        .policy-content {
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            line-height: 1.6;
-        }
-
-        /* Contact Page */
-        .contact-page {
-            display: none;
-            padding: 90px 0 30px;
-            min-height: 100vh;
-        }
-
-        .contact-content {
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        /* Ads Container */
+        /* Ads */
         .ads-container {
-            margin: 25px 0;
+            margin: 30px 0;
             text-align: center;
-            background: white;
-            padding: 20px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-        }
-
-        .ad-label {
-            font-size: 0.7rem;
-            color: var(--gray);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .ad-responsive {
-            width: 100%;
-            overflow: hidden;
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(to right, #2d3436, #1a1e21);
+            background: #2d3436;
             color: white;
-            padding: 40px 0 15px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 8px;
-        }
-
-        .footer-links a {
-            color: #b2b2b2;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #b2b2b2;
-            font-size: 0.8rem;
+            padding: 30px 0;
+            margin-top: 50px;
         }
 
-        /* Loading Spinner */
+        /* Loading */
         .loading {
             text-align: center;
-            padding: 40px 20px;
+            padding: 40px;
+            color: #666;
         }
 
         .spinner {
             border: 3px solid #f3f3f3;
-            border-top: 3px solid var(--primary);
+            border-top: 3px solid #6a11cb;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -558,40 +166,14 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Mobile Responsive */
+        /* Mobile */
         @media (max-width: 768px) {
-            .navbar {
-                padding: 12px 0;
+            .video-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
             
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero-title {
-                font-size: 1.6rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 110px 0 40px;
-            }
-            
-            .section {
-                padding: 30px 0;
+            .hero h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -600,533 +182,113 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo" id="homeLogo">
-                    <i class="fas fa-play-circle logo-icon"></i>
-                    <span class="logo-text">Mastmaal.fun</span>
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#" id="homeLink">Home</a></li>
-                    <li><a href="#" id="videosLink">Videos</a></li>
-                    <li><a href="#" id="privacyLink">Privacy Policy</a></li>
-                    <li><a href="#" id="contactLink">Contact Us</a></li>
-                </ul>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div class="mobile-nav" id="mobileNav">
-            <ul class="mobile-nav-links">
-                <li><a href="#" id="mobileHomeLink">Home</a></li>
-                <li><a href="#" id="mobileVideosLink">Videos</a></li>
-                <li><a href="#" id="mobilePrivacyLink">Privacy Policy</a></li>
-                <li><a href="#" id="mobileContactLink">Contact Us</a></li>
-            </ul>
+            <a href="#" class="logo">Mastmaal.fun</a>
         </div>
     </header>
 
-    <!-- Home Page -->
-    <div id="homePage">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <h1 class="hero-title">WELCOME TO MASTMAAL.FUN</h1>
-                <p class="hero-subtitle">Your Ultimate Video Destination</p>
-                
-                <!-- AD SPACE -->
-                <div class="ads-container">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-responsive">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : '43fc97b9028c31d1675dcb4dc9f5321f',
-                                'format' : 'iframe',
-                                'height' : 90,
-                                'width' : 728,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/43fc97b9028c31d1675dcb4dc9f5321f/invoke.js"></script>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Videos Section -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">Latest Videos</h2>
-                
-                <!-- AD SPACE -->
-                <div class="ads-container">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-responsive">
-                        <script type='text/javascript' src='//pl27816605.effectivegatecpm.com/d7/d9/b5/d7d9b5e6ca04b307c731ac045a8205f0.js'></script>
-                    </div>
-                </div>
-
-                <div class="video-grid" id="videoGrid">
-                    <div class="loading">
-                        <div class="spinner"></div>
-                        Loading videos...
-                    </div>
-                </div>
-
-                <!-- AD SPACE -->
-                <div class="ads-container">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-responsive">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : 'adf0bc0c2f371b15e8d05c2e17ec8305',
-                                'format' : 'iframe',
-                                'height' : 60,
-                                'width' : 468,
-                                'params' : {}
-                            };
-                        </script>
-                        <script type="text/javascript" src="//www.highperformanceformat.com/adf0bc0c2f371b15e8d05c2e17ec8305/invoke.js"></script>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Video Detail Page -->
-    <div class="video-detail-page" id="videoDetailPage">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <button class="back-btn" id="backToHome">
-                <i class="fas fa-arrow-left"></i> Back to Videos
-            </button>
-            
-            <div class="video-detail-container">
-                <div class="main-video">
-                    <div class="video-player" id="videoPlayerContainer">
-                        <div style="display: flex; align-items: center; justify-content: center; height: 400px; background: #000; color: white;">
-                            <div style="text-align: center;">
-                                <i class="fas fa-play-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                                <p>Video will play here</p>
-                            </div>
-                        </div>
-                    </div>
+            <h1>Welcome to Mastmaal.fun</h1>
+            <p>Your favorite videos, all in one place</p>
+        </div>
+    </section>
 
-                    <div class="video-detail-info">
-                        <h1 class="video-detail-title" id="detailVideoTitle">Video Title</h1>
-                        <div class="video-detail-meta">
-                            <span id="detailVideoViews">0 views</span>
-                            <span id="detailVideoDate">Date</span>
-                        </div>
-                        <p class="video-detail-description" id="detailVideoDescription">
-                            Video description will appear here...
-                        </p>
-                    </div>
-                </div>
-
-                <div class="related-videos">
-                    <h3 class="related-title">Related Videos</h3>
-                    <div class="related-grid" id="relatedVideosGrid">
-                        <!-- Related videos will be loaded here -->
-                    </div>
-                </div>
-            </div>
+    <!-- Ads -->
+    <div class="container ads-container">
+        <div class="ad-responsive">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '43fc97b9028c31d1675dcb4dc9f5321f',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/43fc97b9028c31d1675dcb4dc9f5321f/invoke.js"></script>
         </div>
     </div>
 
-    <!-- Privacy Policy Page -->
-    <div class="privacy-policy" id="privacyPolicyPage">
+    <!-- Videos Section -->
+    <section class="videos-section">
         <div class="container">
-            <button class="back-btn" id="backToHomeFromPrivacy">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
+            <h2 class="section-title">Latest Videos</h2>
             
-            <div class="policy-content">
-                <h1>Privacy Policy</h1>
-                <p>Your privacy is important to us. We collect only necessary information to provide you with the best video streaming experience.</p>
-                <p><strong>Email:</strong> sindhukidshub@gmail.com</p>
+            <div class="video-grid" id="videoGrid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading videos from Bunny.net...</p>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Us Page -->
-    <div class="contact-page" id="contactPage">
-        <div class="container">
-            <button class="back-btn" id="backToHomeFromContact">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-            
-            <div class="contact-content">
-                <h1>Contact Us</h1>
-                <p>We'd love to hear from you! Get in touch with us for any questions or feedback.</p>
-                <p><strong>Email:</strong> sindhukidshub@gmail.com</p>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Mastmaal.fun</h3>
-                    <p>Your premier destination for amazing videos.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#" id="footerHomeLink">Home</a></li>
-                        <li><a href="#" id="footerVideosLink">Videos</a></li>
-                        <li><a href="#" id="footerPrivacyLink">Privacy Policy</a></li>
-                        <li><a href="#" id="footerContactLink">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="mailto:sindhukidshub@gmail.com">Email Support</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2023 Mastmaal.fun. All rights reserved.
-            </div>
+            <p>&copy; 2023 Mastmaal.fun. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Global Variables
-        let VIDEOS_DATA = [];
-        let CURRENT_VIDEO_PLAYER = null;
-
-        // DOM Elements
-        const homePage = document.getElementById('homePage');
-        const videoDetailPage = document.getElementById('videoDetailPage');
-        const privacyPolicyPage = document.getElementById('privacyPolicyPage');
-        const contactPage = document.getElementById('contactPage');
-        const videoGrid = document.getElementById('videoGrid');
-        const relatedVideosGrid = document.getElementById('relatedVideosGrid');
-
-        // Load Videos
-        function loadVideos() {
-            if (!videoGrid) return;
-            
-            // Try to load from localStorage first
+        // CONFIG - Yahan apna GitHub videos.json ka URL dalo
+        const VIDEOS_JSON_URL = "https://sindhukids.github.io/mastmaal/videos.json";
+        
+        // Load videos from JSON file
+        async function loadVideos() {
             try {
-                const savedVideos = localStorage.getItem('mastmaal_videos');
-                if (savedVideos) {
-                    VIDEOS_DATA = JSON.parse(savedVideos);
-                }
+                const response = await fetch(VIDEOS_JSON_URL + '?t=' + Date.now());
+                const videos = await response.json();
+                displayVideos(videos);
             } catch (error) {
-                console.log('No saved videos found');
+                console.error('Error loading videos:', error);
+                document.getElementById('videoGrid').innerHTML = `
+                    <div class="loading">
+                        <p>Videos load nahi ho paaye. Please check your videos.json file.</p>
+                    </div>
+                `;
             }
-
-            // If no videos, use sample videos
-            if (VIDEOS_DATA.length === 0) {
-                VIDEOS_DATA = [
-                    {
-                        id: 'sample1',
-                        title: 'Welcome to Mastmaal.fun',
-                        description: 'This is a sample video to demonstrate our platform. Upload your own videos to get started!',
-                        filename: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-                        thumbnail: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                        views: 150,
-                        date: '2023-12-01'
-                    },
-                    {
-                        id: 'sample2',
-                        title: 'Amazing Nature Video',
-                        description: 'Beautiful nature footage showcasing the wonders of our planet.',
-                        filename: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-                        thumbnail: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                        views: 89,
-                        date: '2023-12-02'
-                    }
-                ];
-            }
-
-            renderVideos(VIDEOS_DATA);
         }
 
-        // Render Videos to Grid
-        function renderVideos(videos) {
-            if (!videoGrid) return;
+        // Display videos on page
+        function displayVideos(videos) {
+            const videoGrid = document.getElementById('videoGrid');
             
-            if (videos.length === 0) {
+            if (!videos || videos.length === 0) {
                 videoGrid.innerHTML = `
                     <div class="loading">
-                        <i class="fas fa-video-slash" style="font-size: 3rem; margin-bottom: 15px; color: #6a11cb;"></i>
-                        <p>No videos available yet!</p>
-                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Upload some videos to get started.</p>
+                        <p>Koi videos available nahi hai!</p>
                     </div>
                 `;
                 return;
             }
-            
-            videoGrid.innerHTML = '';
-            videos.forEach(video => {
-                const videoCard = createVideoCard(video);
-                videoGrid.appendChild(videoCard);
-            });
-        }
 
-        // Create Video Card
-        function createVideoCard(video) {
-            const card = document.createElement('div');
-            card.className = 'video-card';
-            card.setAttribute('data-video-id', video.id);
-            
-            card.innerHTML = `
-                <img src="${video.thumbnail}" alt="${video.title}" class="video-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                <div class="video-info">
-                    <h3 class="video-title">${video.title}</h3>
-                    <div class="video-meta">
-                        <span>${video.views} views</span>
-                        <span>${video.date}</span>
+            videoGrid.innerHTML = videos.map(video => `
+                <div class="video-card" onclick="playVideo('${video.url}', '${video.title}')">
+                    <img src="${video.thumbnail}" 
+                         alt="${video.title}" 
+                         class="video-thumbnail"
+                         onerror="this.src='https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&w=800&q=80'">
+                    <div class="video-info">
+                        <h3 class="video-title">${video.title}</h3>
+                        <div class="video-views">${video.views || '0'} views</div>
                     </div>
                 </div>
-            `;
-            
-            card.addEventListener('click', () => {
-                showVideoDetail(video.id);
-            });
-            
-            return card;
+            `).join('');
         }
 
-        // Show Video Detail
-        function showVideoDetail(videoId) {
-            const video = VIDEOS_DATA.find(v => v.id === videoId);
-            if (!video) return;
-
-            // Update views
-            video.views += 1;
-            localStorage.setItem('mastmaal_videos', JSON.stringify(VIDEOS_DATA));
-
-            // Update UI
-            const detailVideoTitle = document.getElementById('detailVideoTitle');
-            const detailVideoViews = document.getElementById('detailVideoViews');
-            const detailVideoDate = document.getElementById('detailVideoDate');
-            const detailVideoDescription = document.getElementById('detailVideoDescription');
-
-            if (detailVideoTitle) detailVideoTitle.textContent = video.title;
-            if (detailVideoViews) detailVideoViews.textContent = `${video.views} views`;
-            if (detailVideoDate) detailVideoDate.textContent = video.date;
-            if (detailVideoDescription) detailVideoDescription.textContent = video.description;
-
-            // Load video player
-            loadVideoPlayer(video);
-
-            // Load related videos
-            loadRelatedVideos(videoId);
-
-            // Show video detail page
-            if (homePage) homePage.style.display = 'none';
-            if (videoDetailPage) videoDetailPage.style.display = 'block';
-            if (privacyPolicyPage) privacyPolicyPage.style.display = 'none';
-            if (contactPage) contactPage.style.display = 'none';
-            
-            window.scrollTo(0, 0);
+        // Play video in new tab
+        function playVideo(videoUrl, title) {
+            const videoPageUrl = `video.html?url=${encodeURIComponent(videoUrl)}&title=${encodeURIComponent(title)}`;
+            window.open(videoPageUrl, '_blank');
         }
 
-        // Load Video Player
-        function loadVideoPlayer(video) {
-            const videoContainer = document.getElementById('videoPlayerContainer');
-            if (!videoContainer) return;
-            
-            videoContainer.innerHTML = '';
-            
-            const videoElement = document.createElement('video');
-            videoElement.controls = true;
-            videoElement.style.width = '100%';
-            videoElement.style.height = 'auto';
-            videoElement.style.maxHeight = '70vh';
-            videoElement.preload = 'metadata';
-            videoElement.playsInline = true;
-            
-            const sourceElement = document.createElement('source');
-            sourceElement.src = video.filename;
-            sourceElement.type = 'video/mp4';
-            
-            videoElement.appendChild(sourceElement);
-            videoElement.appendChild(document.createTextNode('Your browser does not support the video tag.'));
-            
-            videoContainer.appendChild(videoElement);
-            
-            CURRENT_VIDEO_PLAYER = videoElement;
-            
-            // Auto-play with user interaction
-            videoElement.play().catch(e => {
-                console.log('Auto-play prevented:', e);
-            });
-        }
+        // Auto refresh every 2 minutes
+        setInterval(loadVideos, 2 * 60 * 1000);
 
-        // Load Related Videos
-        function loadRelatedVideos(currentVideoId) {
-            if (!relatedVideosGrid) return;
-            
-            relatedVideosGrid.innerHTML = '';
-            
-            const relatedVideos = VIDEOS_DATA
-                .filter(video => video.id !== currentVideoId)
-                .slice(0, 4);
-            
-            relatedVideos.forEach(video => {
-                const relatedCard = createRelatedVideoCard(video);
-                relatedVideosGrid.appendChild(relatedCard);
-            });
-        }
-
-        // Create Related Video Card
-        function createRelatedVideoCard(video) {
-            const card = document.createElement('div');
-            card.className = 'related-video-card';
-            
-            card.innerHTML = `
-                <img src="${video.thumbnail}" alt="${video.title}" class="related-thumbnail" onerror="this.src='https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                <div class="related-video-info">
-                    <h4 class="related-video-title">${video.title}</h4>
-                    <div class="related-video-meta">
-                        <span>${video.views} views</span>
-                    </div>
-                </div>
-            `;
-            
-            card.addEventListener('click', () => {
-                showVideoDetail(video.id);
-            });
-            
-            return card;
-        }
-
-        // Navigation Functions
-        function showHomePage() {
-            if (homePage) homePage.style.display = 'block';
-            if (videoDetailPage) videoDetailPage.style.display = 'none';
-            if (privacyPolicyPage) privacyPolicyPage.style.display = 'none';
-            if (contactPage) contactPage.style.display = 'none';
-            window.scrollTo(0, 0);
-        }
-
-        function showPrivacyPolicy() {
-            if (homePage) homePage.style.display = 'none';
-            if (videoDetailPage) videoDetailPage.style.display = 'none';
-            if (privacyPolicyPage) privacyPolicyPage.style.display = 'block';
-            if (contactPage) contactPage.style.display = 'none';
-            window.scrollTo(0, 0);
-        }
-
-        function showContactPage() {
-            if (homePage) homePage.style.display = 'none';
-            if (videoDetailPage) videoDetailPage.style.display = 'none';
-            if (privacyPolicyPage) privacyPolicyPage.style.display = 'none';
-            if (contactPage) contactPage.style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-
-        // Mobile Menu Functions
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            if (mobileNav) {
-                mobileNav.classList.toggle('active');
-            }
-        }
-
-        function closeMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            if (mobileNav) {
-                mobileNav.classList.remove('active');
-            }
-        }
-
-        // Initialize Event Listeners
-        function initializeEventListeners() {
-            console.log('Initializing event listeners...');
-
-            // Mobile Menu
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-            }
-
-            // Navigation Links
-            const homeLogo = document.getElementById('homeLogo');
-            if (homeLogo) homeLogo.addEventListener('click', showHomePage);
-
-            const homeLink = document.getElementById('homeLink');
-            if (homeLink) homeLink.addEventListener('click', showHomePage);
-
-            const videosLink = document.getElementById('videosLink');
-            if (videosLink) videosLink.addEventListener('click', showHomePage);
-
-            const privacyLink = document.getElementById('privacyLink');
-            if (privacyLink) privacyLink.addEventListener('click', showPrivacyPolicy);
-
-            const contactLink = document.getElementById('contactLink');
-            if (contactLink) contactLink.addEventListener('click', showContactPage);
-
-            // Mobile Navigation Links
-            const mobileHomeLink = document.getElementById('mobileHomeLink');
-            if (mobileHomeLink) mobileHomeLink.addEventListener('click', showHomePage);
-
-            const mobileVideosLink = document.getElementById('mobileVideosLink');
-            if (mobileVideosLink) mobileVideosLink.addEventListener('click', showHomePage);
-
-            const mobilePrivacyLink = document.getElementById('mobilePrivacyLink');
-            if (mobilePrivacyLink) mobilePrivacyLink.addEventListener('click', showPrivacyPolicy);
-
-            const mobileContactLink = document.getElementById('mobileContactLink');
-            if (mobileContactLink) mobileContactLink.addEventListener('click', showContactPage);
-
-            // Footer Links
-            const footerHomeLink = document.getElementById('footerHomeLink');
-            if (footerHomeLink) footerHomeLink.addEventListener('click', showHomePage);
-
-            const footerVideosLink = document.getElementById('footerVideosLink');
-            if (footerVideosLink) footerVideosLink.addEventListener('click', showHomePage);
-
-            const footerPrivacyLink = document.getElementById('footerPrivacyLink');
-            if (footerPrivacyLink) footerPrivacyLink.addEventListener('click', showPrivacyPolicy);
-
-            const footerContactLink = document.getElementById('footerContactLink');
-            if (footerContactLink) footerContactLink.addEventListener('click', showContactPage);
-
-            // Back Buttons
-            const backToHome = document.getElementById('backToHome');
-            if (backToHome) backToHome.addEventListener('click', showHomePage);
-
-            const backToHomeFromPrivacy = document.getElementById('backToHomeFromPrivacy');
-            if (backToHomeFromPrivacy) backToHomeFromPrivacy.addEventListener('click', showHomePage);
-
-            const backToHomeFromContact = document.getElementById('backToHomeFromContact');
-            if (backToHomeFromContact) backToHomeFromContact.addEventListener('click', showHomePage);
-
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                const mobileNav = document.getElementById('mobileNav');
-                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-                
-                if (mobileNav && mobileMenuBtn && 
-                    !mobileNav.contains(e.target) && 
-                    !mobileMenuBtn.contains(e.target)) {
-                    closeMobileMenu();
-                }
-            });
-        }
-
-        // Initialize the App
-        function initializeApp() {
-            console.log('Initializing Mastmaal.fun...');
-            loadVideos();
-            initializeEventListeners();
-            
-            // Show home page by default
-            showHomePage();
-        }
-
-        // Start the app when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initializeApp);
+        // Load videos when page opens
+        loadVideos();
     </script>
 </body>
 </html>
